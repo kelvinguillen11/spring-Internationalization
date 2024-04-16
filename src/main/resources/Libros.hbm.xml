@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.example.demo_springmvc.entities.Libros" table="libros" schema="inventario_libros">
+        <id name="codigoLibro">
+            <column name="codigo_libro" sql-type="varchar(9)" length="9"/>
+        </id>
+        <property name="nombreLibro">
+            <column name="nombre_libro" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="existencias">
+            <column name="existencias" sql-type="int"/>
+        </property>
+        <property name="precio">
+            <column name="precio" sql-type="decimal(10,2)" precision="10" scale="2"/>
+        </property>
+        <property name="codigoAutor" insert="false" update="false">
+            <column name="codigo_autor" sql-type="varchar(6)" length="6"/>
+        </property>
+        <property name="codigoEditorial" insert="false" update="false">
+            <column name="codigo_editorial" sql-type="varchar(6)" length="6"/>
+        </property>
+        <property name="idGenero"  insert="false" update="false">
+            <column name="id_genero" sql-type="int"/>
+        </property>
+        <property name="descripcion">
+            <column name="descripcion" sql-type="text" not-null="true"/>
+        </property>
+        <many-to-one name="autoresByCodigoAutor" class="com.example.demo_springmvc.entities.Autores">
+            <column name="codigo_autor"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
