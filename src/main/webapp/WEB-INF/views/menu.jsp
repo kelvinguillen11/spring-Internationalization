@@ -23,6 +23,24 @@
                         <li><a href="#">Registrar autor</a></li>
                         <li><a href="#">Ver lista de autores</a></li>
                     </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle"
+                             data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false"
+                            ><s:message code="lenguaje"/>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="?locale=es">Español</a>
+                                </li>
+                                <li>
+                                    <a href="?locale=en">Ingles</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
@@ -38,8 +56,8 @@
                        role="button" aria-haspopup="true" 
                        aria-expanded="false">Libros<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Registrar libro</a></li>
-                        <li><a href="#">Ver lista de libros</a></li>
+                        <li><a href="<s:url value="/libros/create"/> ">Registrar libro</a></li>
+                        <li><a href="<s:url value="/libros/list"/> ">Ver lista de libros</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

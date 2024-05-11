@@ -1,10 +1,10 @@
 package com.example.demo_springmvc.model;
 
+import com.example.demo_springmvc.entities.Editoriales;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import com.example.demo_springmvc.util.HibernateUtil;
-import com.example.demo_springmvc.entities.Editoriales;
 
 import java.util.ArrayList;
 import java.util.List;

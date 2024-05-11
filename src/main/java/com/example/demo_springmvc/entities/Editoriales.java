@@ -2,11 +2,8 @@ package com.example.demo_springmvc.entities;
 
 import jakarta.persistence.*;
 
-import java.util.Collection;
-
 @Entity
 public class Editoriales {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "codigo_editorial", nullable = false, length = 6)
     private String codigoEditorial;
@@ -19,8 +16,6 @@ public class Editoriales {
     @Basic
     @Column(name = "telefono", nullable = false, length = 9)
     private String telefono;
-    @OneToMany(mappedBy = "editorialesByCodigoEditorial")
-    private Collection<Libros> librosByCodigoEditorial;
 
     public String getCodigoEditorial() {
         return codigoEditorial;
@@ -52,13 +47,5 @@ public class Editoriales {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
-    }
-
-    public Collection<Libros> getLibrosByCodigoEditorial() {
-        return librosByCodigoEditorial;
-    }
-
-    public void setLibrosByCodigoEditorial(Collection<Libros> librosByCodigoEditorial) {
-        this.librosByCodigoEditorial = librosByCodigoEditorial;
     }
 }

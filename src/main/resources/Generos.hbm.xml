@@ -14,11 +14,5 @@
         <property name="descripcion">
             <column name="descripcion" sql-type="varchar(100)" length="100"/>
         </property>
-        <set name="librosByIdGenero" inverse="true">
-            <key>
-                <column name="id_genero"/>
-            </key>
-            <one-to-many not-found="ignore" class="com.example.demo_springmvc.entities.Libros"/>
-        </set>
     </class>
 </hibernate-mapping>

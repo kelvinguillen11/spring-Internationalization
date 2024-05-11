@@ -7,10 +7,11 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/inventario_libros?useSSL=false</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">root</property>
-        <mapping class="com.example.demo_springmvc.entities.Autores"/>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
         <mapping resource="Autores.hbm.xml"/>
-        <mapping class="com.example.demo_springmvc.entities.Editoriales"/>
+        <mapping class="com.example.demo_springmvc.entities.Autores"/>
         <mapping resource="Editoriales.hbm.xml"/>
+        <mapping class="com.example.demo_springmvc.entities.Editoriales"/>
         <mapping resource="Generos.hbm.xml"/>
         <mapping class="com.example.demo_springmvc.entities.Generos"/>
         <mapping resource="Libros.hbm.xml"/>

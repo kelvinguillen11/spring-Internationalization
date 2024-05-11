@@ -17,20 +17,17 @@
         <property name="precio">
             <column name="precio" sql-type="decimal(10,2)" precision="10" scale="2"/>
         </property>
-        <property name="codigoAutor" insert="false" update="false">
-            <column name="codigo_autor" sql-type="varchar(6)" length="6"/>
-        </property>
-        <property name="codigoEditorial" insert="false" update="false">
-            <column name="codigo_editorial" sql-type="varchar(6)" length="6"/>
-        </property>
-        <property name="idGenero"  insert="false" update="false">
-            <column name="id_genero" sql-type="int"/>
-        </property>
         <property name="descripcion">
             <column name="descripcion" sql-type="text" not-null="true"/>
         </property>
         <many-to-one name="autoresByCodigoAutor" class="com.example.demo_springmvc.entities.Autores">
             <column name="codigo_autor"/>
+        </many-to-one>
+        <many-to-one name="editorialesByCodigoEditorial" class="com.example.demo_springmvc.entities.Editoriales">
+            <column name="codigo_editorial"/>
+        </many-to-one>
+        <many-to-one name="generosByIdGenero" class="com.example.demo_springmvc.entities.Generos">
+            <column name="id_genero"/>
         </many-to-one>
     </class>
 </hibernate-mapping>

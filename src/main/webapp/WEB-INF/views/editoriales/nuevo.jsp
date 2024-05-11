@@ -19,48 +19,53 @@
 <jsp:include page="/WEB-INF/views/menu.jsp"/>
 <div class="container">
     <div class="row">
-        <h3>Nuevo editorial</h3>
+        <h3><s:message code="editorial.nuevo"/></h3>
     </div>
     <div class="row">
         <div class=" col-md-7">
             <f:form action="create" method="POST" modelAttribute="editorial">
+                <f:errors path="*" element="div" cssClass="alert alert-danger" />
                 <div class="well well-sm"><strong><span class="glyphicon
-glyphicon-asterisk"></span>Campos requeridos</strong></div>
+glyphicon-asterisk"></span><s:message code="requeridos"/></strong></div>
                 <div class="form-group">
-                    <label for="codigoEditorial">Codigo del editorial:</label>
+                    <label for="codigoEditorial"><s:message code="editorial.codigo"/></label>
                     <div class="input-group">
                         <f:input path="codigoEditorial" cssClass="formcontrol"/>
                         <span class="input-group-addon"><span class="glyphicon
 glyphicon-asterisk"></span></span>
                     </div>
+                    <f:errors path="codigoEditorial" cssClass="aler alert-danger"/>
                 </div>
                 <div class="form-group">
-                    <label for="nombreEditorial">Nombre del editorial:</label>
+                    <label for="nombreEditorial"><s:message code="editorial.nombre"/></label>
                     <div class="input-group">
                         <f:input path="nombreEditorial" cssClass="formcontrol"/>
                         <span class="input-group-addon"><span class="glyphicon
 glyphicon-asterisk"></span></span>
                     </div>
+                    <f:errors path="nombreEditorial" cssClass="aler alert-danger"/>
                 </div>
                 <div class="form-group">
-                    <label for="contacto">Contacto:</label>
+                    <label for="contacto"><s:message code="editorial.contacto"/></label>
                     <div class="input-group">
                         <f:input path="contacto" cssClass="form-control"/>
                         <span class="input-group-addon"><span class="glyphicon
 glyphicon-asterisk"></span></span>
                     </div>
+                    <f:errors path="contacto" cssClass="aler alert-danger"/>
                 </div>
                 <div class="form-group">
-                    <label for="telefono">Telefono:</label>
+                    <label for="telefono"><s:message code="editorial.telefono"/></label>
                     <div class="input-group">
                         <f:input path="telefono" cssClass="form-control"/>
                         <span class="input-group-addon"><span class="glyphicon
 glyphicon-asterisk"></span></span>
                     </div>
+                    <f:errors path="telefono" cssClass="aler alert-danger"/>
                 </div>
-                <f:button class="btn btn-info">Guardar</f:button>
+                <f:button class="btn btn-info"><s:message code="guardar"/></f:button>
                 <a class="btn btn-danger" href="<s:url
-value="/editoriales/list"/>">Cancelar</a>
+value="/editoriales/list"/>"><s:message code="cancelar"/></a>
             </f:form>
         </div>
     </div>

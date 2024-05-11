@@ -17,11 +17,5 @@
         <property name="telefono">
             <column name="telefono" sql-type="varchar(9)" length="9"/>
         </property>
-        <set name="librosByCodigoEditorial" inverse="true">
-            <key>
-                <column name="codigo_editorial"/>
-            </key>
-            <one-to-many not-found="ignore" class="com.example.demo_springmvc.entities.Libros"/>
-        </set>
     </class>
 </hibernate-mapping>

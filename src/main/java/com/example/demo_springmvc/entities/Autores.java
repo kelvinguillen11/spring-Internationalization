@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 @Entity
 public class Autores {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "codigo_autor", nullable = false, length = 6)
     private String codigoAutor;
